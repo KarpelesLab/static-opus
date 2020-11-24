@@ -19,16 +19,14 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-// @remark we must use another packet for utest, because the cgo will dup symbols.
-package opus_test
+package opus
 
 import (
-	"github.com/KarpelesLab/static-opus/opus"
 	"testing"
 )
 
 func TestInit(t *testing.T) {
-	d := opus.NewOpusDecoder()
+	d := NewOpusDecoder()
 
 	if err := d.Init(48000, 2); err != nil {
 		t.Error("init failed, err is", err)
