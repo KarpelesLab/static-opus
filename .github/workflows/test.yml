@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Install Go
       uses: actions/setup-go@v2
+    - name: Install system dependencies
+      run: sudo apt-get install moreutils
       with:
         go-version: ${{ matrix.go-version }}
     - name: Checkout code
