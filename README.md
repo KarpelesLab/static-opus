@@ -121,7 +121,7 @@ options.
 ### API Docs
 
 Go wrapper API reference:
-https://godoc.org/github.com/KarpelesLab/static-opus
+https://godoc.org/github.com/KarpelesLab/static-opus/opus
 
 Full libopus C API reference:
 https://www.opus-codec.org/docs/opus_api-1.1.3/
