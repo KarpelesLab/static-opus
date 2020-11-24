@@ -48,7 +48,7 @@
 #ifdef FIXED_POINT
 #include "fixed/structs_FIX.h"
 #else
-#include "float/structs_FLP.h"
+#include "structs_FLP.h"
 #endif
 
 #define MAX_ENCODER_BUFFER 480

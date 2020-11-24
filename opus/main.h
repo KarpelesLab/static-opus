@@ -39,7 +39,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "entdec.h"
 
 #if defined(OPUS_X86_MAY_HAVE_SSE4_1)
-#include "x86/main_sse.h"
+#include "main_sse.h"
 #endif
 
 #if (defined(OPUS_ARM_ASM) || defined(OPUS_ARM_MAY_HAVE_NEON_INTR))

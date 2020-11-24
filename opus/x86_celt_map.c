@@ -29,7 +29,7 @@
 #include "config.h"
 #endif
 
-#include "x86/x86cpu.h"
+#include "x86cpu.h"
 #include "celt_lpc.h"
 #include "pitch.h"
 #include "pitch_sse.h"

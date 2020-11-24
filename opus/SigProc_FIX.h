@@ -44,7 +44,7 @@ extern "C"
 #include "cpu_support.h"
 
 #if defined(OPUS_X86_MAY_HAVE_SSE4_1)
-#include "x86/SigProc_FIX_sse.h"
+#include "SigProc_FIX_sse.h"
 #endif
 
 #if (defined(OPUS_ARM_ASM) || defined(OPUS_ARM_MAY_HAVE_NEON_INTR))

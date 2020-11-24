@@ -48,7 +48,7 @@
   (defined(OPUS_X86_MAY_HAVE_SSE4_1) && !defined(OPUS_X86_PRESUME_SSE4_1)) || \
   (defined(OPUS_X86_MAY_HAVE_AVX) && !defined(OPUS_X86_PRESUME_AVX))
 
-#include "x86/x86cpu.h"
+#include "x86cpu.h"
 /* We currently support 5 x86 variants:
  * arch[0] -> non-sse
  * arch[1] -> sse
