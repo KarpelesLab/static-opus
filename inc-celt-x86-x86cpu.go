@@ -3,6 +3,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/celt/x86/x86cpu.c>
+#include <opus-1.5.2/celt/x86/x86cpu.c>
 */
 import "C"

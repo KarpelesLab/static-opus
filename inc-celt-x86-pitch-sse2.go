@@ -3,6 +3,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/celt/x86/pitch_sse2.c>
+#include <opus-1.5.2/celt/x86/pitch_sse2.c>
 */
 import "C"

@@ -1,6 +1,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/silk/NLSF_encode.c>
+#include <opus-1.5.2/silk/NLSF_encode.c>
 */
 import "C"

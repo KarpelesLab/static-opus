@@ -1,6 +1,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/celt/entenc.c>
+#include <opus-1.5.2/celt/entenc.c>
 */
 import "C"

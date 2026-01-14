@@ -6,7 +6,7 @@ package opus
 #cgo windows LDFLAGS: -lssp
 
 // add includes needed for opus, including building the actual opus lib
-#cgo CFLAGS: -Iopus-1.3.1 -Iopus-1.3.1/include -Iopus-1.3.1/celt -Iopus-1.3.1/silk -Iopus-1.3.1/silk/float
+#cgo CFLAGS: -Iopus-1.5.2 -Iopus-1.5.2/include -Iopus-1.5.2/celt -Iopus-1.5.2/silk -Iopus-1.5.2/silk/float
 #cgo LDFLAGS: -lm
 */
 import "C"

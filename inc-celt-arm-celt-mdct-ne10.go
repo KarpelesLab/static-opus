@@ -3,6 +3,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/celt/arm/celt_mdct_ne10.c>
+#include <opus-1.5.2/celt/arm/celt_mdct_ne10.c>
 */
 import "C"

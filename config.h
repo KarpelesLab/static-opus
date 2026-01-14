@@ -10,6 +10,12 @@
 /* Custom modes */
 /* #undef CUSTOM_MODES */
 
+/* Disable DNN debug float */
+/* #undef DISABLE_DEBUG_FLOAT */
+
+/* Disable dot product instructions */
+/* #undef DISABLE_DOT_PROD */
+
 /* Do not build the float API */
 /* #undef DISABLE_FLOAT_API */
 
@@ -19,8 +25,23 @@
 /* Assertions */
 /* #undef ENABLE_ASSERTIONS */
 
+/* Deep PLC */
+/* #undef ENABLE_DEEP_PLC */
+
+/* DRED */
+/* #undef ENABLE_DRED */
+
 /* Hardening */
 #define ENABLE_HARDENING 1
+
+/* LOSSGEN */
+/* #undef ENABLE_LOSSGEN */
+
+/* Enable Opus Speech Coding Enhancement */
+/* #undef ENABLE_OSCE */
+
+/* Enable dumping of OSCE training data */
+/* #undef ENABLE_OSCE_TRAINING_DATA */
 
 /* Debug fixed-point implementation */
 /* #undef FIXED_DEBUG */
@@ -52,11 +73,11 @@
 /* Define to 1 if you have the `lrintf' function. */
 #define HAVE_LRINTF 1
 
-/* Define to 1 if you have the <memory.h> header file. */
-#define HAVE_MEMORY_H 1
-
 /* Define to 1 if you have the <stdint.h> header file. */
 #define HAVE_STDINT_H 1
+
+/* Define to 1 if you have the <stdio.h> header file. */
+#define HAVE_STDIO_H 1
 
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define HAVE_STDLIB_H 1
@@ -97,6 +118,9 @@
 /* Use ARM NEON inline asm optimizations */
 /* #undef OPUS_ARM_INLINE_NEON */
 
+/* Compiler supports Aarch64 DOTPROD Intrinsics */
+/* #undef OPUS_ARM_MAY_HAVE_DOTPROD */
+
 /* Define if assembler supports EDSP instructions */
 /* #undef OPUS_ARM_MAY_HAVE_EDSP */
 
@@ -111,6 +135,9 @@
 
 /* Define if binary requires Aarch64 Neon Intrinsics */
 /* #undef OPUS_ARM_PRESUME_AARCH64_NEON_INTR */
+
+/* Define if binary requires Aarch64 dotprod Intrinsics */
+/* #undef OPUS_ARM_PRESUME_DOTPROD */
 
 /* Define if binary requires EDSP instruction support */
 /* #undef OPUS_ARM_PRESUME_EDSP */
@@ -133,8 +160,8 @@
 /* Use run-time CPU capabilities detection */
 #define OPUS_HAVE_RTCD 1
 
-/* Compiler supports X86 AVX Intrinsics */
-#define OPUS_X86_MAY_HAVE_AVX 1
+/* Compiler supports X86 AVX2 Intrinsics */
+/* #undef OPUS_X86_MAY_HAVE_AVX2 */
 
 /* Compiler supports X86 SSE Intrinsics */
 #define OPUS_X86_MAY_HAVE_SSE 1
@@ -145,8 +172,8 @@
 /* Compiler supports X86 SSE4.1 Intrinsics */
 //#define OPUS_X86_MAY_HAVE_SSE4_1 1
 
-/* Define if binary requires AVX intrinsics support */
-/* #undef OPUS_X86_PRESUME_AVX */
+/* Define if binary requires AVX2 intrinsics support */
+/* #undef OPUS_X86_PRESUME_AVX2 */
 
 /* Define if binary requires SSE intrinsics support */
 #define OPUS_X86_PRESUME_SSE 1
@@ -164,7 +191,7 @@
 #define PACKAGE_NAME "opus"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "opus 1.3.1"
+#define PACKAGE_STRING "opus 1.5.2"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "opus"
@@ -173,7 +200,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "1.3.1"
+#define PACKAGE_VERSION "1.5.2"
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1

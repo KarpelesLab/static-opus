@@ -1,6 +1,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/silk/enc_API.c>
+#include <opus-1.5.2/silk/enc_API.c>
 */
 import "C"

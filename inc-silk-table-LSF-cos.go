@@ -1,6 +1,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/silk/table_LSF_cos.c>
+#include <opus-1.5.2/silk/table_LSF_cos.c>
 */
 import "C"

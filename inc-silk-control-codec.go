@@ -1,6 +1,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/silk/control_codec.c>
+#include <opus-1.5.2/silk/control_codec.c>
 */
 import "C"

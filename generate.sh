@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OPUS_VERSION="1.3.1"
+OPUS_VERSION="1.5.2"
 
 # OK so ideally I'd like to have something like:
 # #cgo SOURCES opus/a.c opus/b.c etc...
@@ -61,6 +61,9 @@ for dir in src celt silk celt/arm celt/x86 silk/float silk/arm silk/x86; do
 				;;
 			*sse4_1*)
 				# go won't let us compile for sse4-1
+				;;
+			*avx*)
+				# go won't let us compile for avx/avx2 without per-file CFLAGS
 				;;
 			src/opus_compare.c)
 				;;

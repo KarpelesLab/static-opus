@@ -1,6 +1,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/celt/celt_encoder.c>
+#include <opus-1.5.2/celt/celt_encoder.c>
 */
 import "C"

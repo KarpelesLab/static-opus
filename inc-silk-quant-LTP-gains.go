@@ -1,6 +1,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/silk/quant_LTP_gains.c>
+#include <opus-1.5.2/silk/quant_LTP_gains.c>
 */
 import "C"

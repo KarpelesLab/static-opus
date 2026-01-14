@@ -3,6 +3,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/celt/x86/x86_celt_map.c>
+#include <opus-1.5.2/celt/x86/x86_celt_map.c>
 */
 import "C"

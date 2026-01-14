@@ -1,6 +1,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/silk/resampler_rom.c>
+#include <opus-1.5.2/silk/resampler_rom.c>
 */
 import "C"

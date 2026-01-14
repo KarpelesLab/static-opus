@@ -1,6 +1,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/silk/LPC_analysis_filter.c>
+#include <opus-1.5.2/silk/LPC_analysis_filter.c>
 */
 import "C"

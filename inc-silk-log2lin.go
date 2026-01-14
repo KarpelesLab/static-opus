@@ -1,6 +1,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/silk/log2lin.c>
+#include <opus-1.5.2/silk/log2lin.c>
 */
 import "C"

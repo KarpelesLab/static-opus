@@ -1,6 +1,6 @@
 package opus
 
 /*
-#include <opus-1.3.1/celt/cwrs.c>
+#include <opus-1.5.2/celt/cwrs.c>
 */
 import "C"
