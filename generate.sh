@@ -37,16 +37,15 @@ import "C"
 EOF
 }
 
-# Note: silk/arm is excluded because it requires fixed-point mode (FIXED_POINT)
-# but this build uses floating-point mode (silk/float)
-for dir in src celt silk celt/arm celt/x86 silk/float silk/x86; do
+# Note: ARM-specific directories (celt/arm, silk/arm) are excluded because:
+# - silk/arm requires fixed-point mode (FIXED_POINT) but we use float
+# - celt/arm has RTCD conflicts without full ARM optimization support
+# ARM builds will use the generic C implementation instead.
+for dir in src celt silk celt/x86 silk/float silk/x86; do
 	COND=""
 	case `basename "$dir"` in
 		x86)
 			COND="x86 amd64"
-			;;
-		arm)
-			COND="arm arm64"
 			;;
 	esac
 
