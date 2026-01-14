@@ -157,7 +157,8 @@
 /* Run bit-exactness checks between optimized and c implementations */
 /* #undef OPUS_CHECK_ASM */
 
-/* Use run-time CPU capabilities detection */
+/* Use run-time CPU capabilities detection - only on x86/x86_64 */
+#if defined(__x86_64__) || defined(__i386__) || defined(_M_IX86) || defined(_M_X64)
 #define OPUS_HAVE_RTCD 1
 
 /* Compiler supports X86 AVX2 Intrinsics */
@@ -183,6 +184,8 @@
 
 /* Define if binary requires SSE4.1 intrinsics support */
 //#define OPUS_X86_PRESUME_SSE4_1 1
+
+#endif /* x86/x86_64 */
 
 /* Define to the address where bug reports for this package should be sent. */
 #define PACKAGE_BUGREPORT "opus@xiph.org"
