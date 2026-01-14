@@ -65,6 +65,9 @@ for dir in src celt silk celt/arm celt/x86 silk/float silk/arm silk/x86; do
 			*avx*)
 				# go won't let us compile for avx/avx2 without per-file CFLAGS
 				;;
+			*ne10*)
+				# NE10 is an optional ARM library not typically available
+				;;
 			src/opus_compare.c)
 				;;
 			*)
