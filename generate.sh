@@ -37,15 +37,16 @@ import "C"
 EOF
 }
 
-# Note: ARM-specific directories (celt/arm, silk/arm) are excluded because:
-# - silk/arm requires fixed-point mode (FIXED_POINT) but we use float
-# - celt/arm has RTCD conflicts without full ARM optimization support
-# ARM builds will use the generic C implementation instead.
-for dir in src celt silk celt/x86 silk/float silk/x86; do
+# ARM NEON optimizations are included for arm64 with PRESUME mode (no RTCD).
+# The *_map.c files are excluded as they are only needed for RTCD.
+for dir in src celt silk celt/x86 silk/float silk/x86 celt/arm silk/arm; do
 	COND=""
-	case `basename "$dir"` in
-		x86)
+	case "$dir" in
+		celt/x86|silk/x86)
 			COND="x86 amd64"
+			;;
+		celt/arm|silk/arm)
+			COND="arm64"
 			;;
 	esac
 
@@ -68,6 +69,9 @@ for dir in src celt silk celt/x86 silk/float silk/x86; do
 				;;
 			*ne10*)
 				# NE10 is an optional ARM library not typically available
+				;;
+			*/arm/*_map.c)
+				# ARM RTCD map files are not needed when using PRESUME mode
 				;;
 			src/opus_compare.c)
 				;;

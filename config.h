@@ -103,53 +103,32 @@
 /* Define to the sub-directory where libtool stores uninstalled libraries. */
 #define LT_OBJDIR ".libs/"
 
-/* Make use of ARM asm optimization */
-/* #undef OPUS_ARM_ASM */
-
-/* Use generic ARMv4 inline asm optimizations */
-/* #undef OPUS_ARM_INLINE_ASM */
-
-/* Use ARMv5E inline asm optimizations */
-/* #undef OPUS_ARM_INLINE_EDSP */
-
-/* Use ARMv6 inline asm optimizations */
-/* #undef OPUS_ARM_INLINE_MEDIA */
-
-/* Use ARM NEON inline asm optimizations */
-/* #undef OPUS_ARM_INLINE_NEON */
-
-/* Compiler supports Aarch64 DOTPROD Intrinsics */
-/* #undef OPUS_ARM_MAY_HAVE_DOTPROD */
-
-/* Define if assembler supports EDSP instructions */
-/* #undef OPUS_ARM_MAY_HAVE_EDSP */
-
-/* Define if assembler supports ARMv6 media instructions */
-/* #undef OPUS_ARM_MAY_HAVE_MEDIA */
-
-/* Define if compiler supports NEON instructions */
-/* #undef OPUS_ARM_MAY_HAVE_NEON */
+/* ARM64 (AArch64) NEON optimizations
+ * We use PRESUME mode (no RTCD) since all ARM64 CPUs have NEON.
+ * RTCD is disabled to avoid needing the *_map.c files.
+ */
+#if defined(__aarch64__) || defined(_M_ARM64)
 
 /* Compiler supports ARMv7/Aarch64 Neon Intrinsics */
-/* #undef OPUS_ARM_MAY_HAVE_NEON_INTR */
+#define OPUS_ARM_MAY_HAVE_NEON_INTR 1
 
-/* Define if binary requires Aarch64 Neon Intrinsics */
-/* #undef OPUS_ARM_PRESUME_AARCH64_NEON_INTR */
+/* Presume NEON is always available - directly call NEON functions */
+#define OPUS_ARM_PRESUME_NEON_INTR 1
 
-/* Define if binary requires Aarch64 dotprod Intrinsics */
-/* #undef OPUS_ARM_PRESUME_DOTPROD */
+/* Note: OPUS_HAVE_RTCD is NOT defined for ARM64, so we skip RTCD tables */
 
-/* Define if binary requires EDSP instruction support */
-/* #undef OPUS_ARM_PRESUME_EDSP */
+#endif /* ARM64/AArch64 */
 
-/* Define if binary requires ARMv6 media instruction support */
-/* #undef OPUS_ARM_PRESUME_MEDIA */
-
-/* Define if binary requires NEON instruction support */
-/* #undef OPUS_ARM_PRESUME_NEON */
-
-/* Define if binary requires NEON intrinsics support */
-/* #undef OPUS_ARM_PRESUME_NEON_INTR */
+/* Unused ARM options */
+/* #undef OPUS_ARM_ASM */
+/* #undef OPUS_ARM_INLINE_ASM */
+/* #undef OPUS_ARM_INLINE_EDSP */
+/* #undef OPUS_ARM_INLINE_MEDIA */
+/* #undef OPUS_ARM_INLINE_NEON */
+/* #undef OPUS_ARM_MAY_HAVE_DOTPROD */
+/* #undef OPUS_ARM_MAY_HAVE_EDSP */
+/* #undef OPUS_ARM_MAY_HAVE_MEDIA */
+/* #undef OPUS_ARM_MAY_HAVE_NEON */
 
 /* This is a build of OPUS */
 #define OPUS_BUILD /**/
